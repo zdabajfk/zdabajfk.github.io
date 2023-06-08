@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>基础知识 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="位运算的一些奇技淫巧位运算简介常见的位运算也就是以下6种： 1234567891011| 运算：即或运算，全0则0&amp; 运算：即与运算，全1则1^ 运算：即异或运算，相同为0，不同为1~ 运算：即非运算，0为1,1为0(&lt;&lt;) 运算：左移运算，高位丢弃，低位补0(&gt;&gt;) 运算：右移运算。（无符号）低位丢弃，高位补0；（有符号）低位丢弃，高位补符号  常用的就是这6种，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础知识">
+<meta property="og:url" content="http://example.com/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="位运算的一些奇技淫巧位运算简介常见的位运算也就是以下6种： 1234567891011| 运算：即或运算，全0则0&amp; 运算：即与运算，全1则1^ 运算：即异或运算，相同为0，不同为1~ 运算：即非运算，0为1,1为0(&lt;&lt;) 运算：左移运算，高位丢弃，低位补0(&gt;&gt;) 运算：右移运算。（无符号）低位丢弃，高位补0；（有符号）低位丢弃，高位补符号  常用的就是这6种，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-06-07T05:46:58.135Z">
+<meta property="article:modified_time" content="2023-06-07T05:47:24.473Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基础知识',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-07 13:47:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基础知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-06-07T05:46:58.135Z" title="Created 2023-06-07 13:46:58">2023-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-06-07T05:47:24.473Z" title="Updated 2023-06-07 13:47:24">2023-06-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基础知识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="位运算的一些奇技淫巧"><a href="#位运算的一些奇技淫巧" class="headerlink" title="位运算的一些奇技淫巧"></a>位运算的一些奇技淫巧</h1><h2 id="位运算简介"><a href="#位运算简介" class="headerlink" title="位运算简介"></a>位运算简介</h2><p>常见的位运算也就是以下6种：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">| 运算：即或运算，全0则0</span><br><span class="line"></span><br><span class="line">&amp; 运算：即与运算，全1则1</span><br><span class="line"></span><br><span class="line">^ 运算：即异或运算，相同为0，不同为1</span><br><span class="line"></span><br><span class="line">~ 运算：即非运算，0为1,1为0</span><br><span class="line"></span><br><span class="line">(&lt;&lt;) 运算：左移运算，高位丢弃，低位补0</span><br><span class="line"></span><br><span class="line">(&gt;&gt;) 运算：右移运算。（无符号）低位丢弃，高位补0；（有符号）低位丢弃，高位补符号</span><br></pre></td></tr></table></figure>
+
+<p>常用的就是这6种，一般解题中也完全够用了！</p>
+<h2 id="技巧介绍"><a href="#技巧介绍" class="headerlink" title="技巧介绍"></a>技巧介绍</h2><h3 id="1-位操作实现加减乘除运算"><a href="#1-位操作实现加减乘除运算" class="headerlink" title="1.位操作实现加减乘除运算"></a>1.位操作实现加减乘除运算</h3><h4 id="加法运算"><a href="#加法运算" class="headerlink" title="加法运算"></a>加法运算</h4><p>这里先从加法运算说起：</p>
+<p>我们假设</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a: 001010101</span><br><span class="line">b: 000101111</span><br></pre></td></tr></table></figure>
+
+<p>在无进位相加下，a^b 就可以达到相加的目的；而在只考虑进位的位的情况下，就是只考虑进位产生的值的时候，我们可以用（a&amp;b）&lt;&lt; 1,那么我们结合上面两种情况是不是可以这么想：我们将a^b的值和(a&amp;b)&lt;&lt;1的值轮番进行求 ^ 和 &amp;&lt;&lt;1 运算，直到最后&amp;&lt;&lt;1的值算为全0，这就意味着所有的进位都已经被 ^ 进结果了，那么最终的结果就是求和的值了</p>
+<p>我们可以看见，当最后 &amp;&lt;&lt;1 的结果为0时，说明所有的进位都已经被加到结果中去了，那么该结果也就是最终的计算结果了。</p>
+<p>这里我们用代码把它表示出来：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> sum = a;</span><br><span class="line">    <span class="keyword">while</span>(b != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      sum = a ^ b;</span><br><span class="line">      b = (a &amp; b) &lt;&lt; <span class="number">1</span>;</span><br><span class="line">      a = sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="减法运算"><a href="#减法运算" class="headerlink" title="减法运算"></a>减法运算</h4><p>那么减法运算就很好理解了，我们可以认为a-b &#x3D; a+(-b)，这里就是要求得b的相反数，那么根据规则，一个数的相反数（补码）就等于反码加1，那么我们是不是可以这么写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">minus</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> add(a , add( ~b , <span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="乘法运算"><a href="#乘法运算" class="headerlink" title="乘法运算"></a>乘法运算</h4><p>假设我们要计算 a * b,那么我们就可以写成a * 2^0 * b0 + a * 2^1 * b1 + …+ a * 2^31 * b31,其中bi为 0 或者为 1 代表整数 b 的二进制数表达中第 i 位的值。</p>
+<p>这里我们同样举一个例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = 22 = 000010110</span><br><span class="line">b = 13 = 000001101</span><br><span class="line">res = 0= 000000000</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2023.cnblogs.com/blog/3069851/202303/3069851-20230306142920129-331620962.png"></p>
+<p>也不知道是哪一位鬼才总结出这种神奇的算法，说实话，有这个计算的功夫，我用正常的计算方法都交卷了。除了应对一些题目外，大家了解一下就好了。</p>
+<p>下面用代码描述一下上面的过程：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">multi</span><span class="params">(<span class="type">int</span> &amp;a,<span class="type">int</span> &amp;b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (b != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>((b &amp; <span class="number">1</span>) != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            res = add(res,a);</span><br><span class="line">        &#125;</span><br><span class="line">        a&lt;&lt; = <span class="number">1</span>;</span><br><span class="line">        b&gt;&gt; = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="除法运算"><a href="#除法运算" class="headerlink" title="除法运算"></a>除法运算</h4><p>这里就不过多赘述了，由于使用的很少加上思路和乘法是一样的，大家有兴趣的可以自己下来推一下。（其实是阿光不想写了）</p>
+<h3 id="2-交换两个整数值"><a href="#2-交换两个整数值" class="headerlink" title="2.交换两个整数值"></a>2.交换两个整数值</h3><p>如果有人说让你交换两个整数的值但不能额外申请第三个变量，你准备使用什么方法呢？</p>
+<p>那么你应该想到这种方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> &amp;a,<span class="type">int</span> &amp;b)</span></span><br><span class="line">&#123;</span><br><span class="line">    a = a ^ b;</span><br><span class="line">    b = a ^ b;</span><br><span class="line">    a = a ^ b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>这里解释一下：<br>首先，a &#x3D; a ^ b; 那么 b &#x3D; a ^ b &#x3D; (a ^ b) ^ b &#x3D; a,那么这里就把 a 的值成功的给了b; 第三步就是将前两步的结果带入计算： a &#x3D; (a ^ b) ^ a &#x3D; b; 交换值的目的就达到了。是不是很奇妙呢？</p>
+<h3 id="3-判断奇偶数"><a href="#3-判断奇偶数" class="headerlink" title="3.判断奇偶数"></a>3.判断奇偶数</h3><p>我觉得这个方法正是让人眼前一亮，核心思想其实就是根据数的最后一位是0还是1来做判断，那么就有：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>((a &amp; <span class="number">1</span>) == <span class="number">0</span>)&#123;</span><br><span class="line">  <span class="comment">//是个偶数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="comment">//是个奇数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-高低位交换"><a href="#4-高低位交换" class="headerlink" title="4.高低位交换"></a>4.高低位交换</h3><p>这个还是比较常用的，在很多客制化的协议里面，常常涉及到高低位交换的操作。假设有一个16位无符号，将其高8位和低8位进行交换：</p>
+<p>举个例子: 00111010 01010011…<br>那么高低8位进行交换就得到: 01010011 00111010 这就是完全不相同的两个数了。</p>
+<p>从上面的操作我们可以看出，将无符号数 a &gt;&gt; 8 就可以将高8位转移到低8位，高位补0； 同时将a &lt;&lt; 8 就可以将低8位转移到高8位，低8位补0，然后将 a &gt;&gt; 8 和 a&lt;&lt; 8 尽行或操作就可以求得交换后的结果。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">short</span> a = <span class="number">34520</span>;</span><br><span class="line">a = (a &gt;&gt; <span class="number">8</span>) | (a &lt;&lt; <span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-统计二进制中1的个数"><a href="#5-统计二进制中1的个数" class="headerlink" title="5.统计二进制中1的个数"></a>5.统计二进制中1的个数</h3><p>这里巧妙的用到了一个 a &amp;&#x3D; (a-1),说一下原理：</p>
+<p>a与a-1进行运算，那么每次都可以消去一个1，那么我们搞一个计数器，当把a所有的1都消去之后，返回计数器的值就可以了，非常的方便</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(a)</span><br><span class="line">&#123;</span><br><span class="line">    a = a &amp; (a<span class="number">-1</span>);</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> count;</span><br></pre></td></tr></table></figure>
+
+
+<p>在出现偶数次的数组中找出奇数次的数<br>这里我们直接看一个力扣上的题目：</p>
+<p>给定一个数组arr,其中只有一个数出现了奇数次，其他的数都是偶数次，将这个数打印出来。</p>
+<p>其实想一下这个题目可以有很多方法都能做出来，但是题目给出的要求是时间复杂度O（N）,常规方法遍历一遍能找出来吗？我是没有想到什么好方法，这里提供一种位运算的思路：</p>
+<p>整数n与0异或的结果是 n,整数n与整数n异或的结果是0. 我们申请一个整形变量 A0赋值为0 ,将A0与arr中的每一个数求异或，那么最后留下来的那个数就是只出现过一次的数，可以揣摩一下。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getjishunum</span><span class="params">(<span class="type">int</span> *arr)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> A0 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; arr.length; i++)</span><br><span class="line">        A0 ^= arr[i];</span><br><span class="line">    <span class="keyword">return</span> A0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>大小写转换<br>除了上面的妙用以外，利用或运算|和空格将英文字符转化为小写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(‘a’ | ’ <span class="string">&#x27;) = ‘a’</span></span><br><span class="line"><span class="string">(‘A’ | ’ &#x27;</span>) = ‘a’</span><br></pre></td></tr></table></figure>
+
+<p>利用与运算 &amp; 和下划线将英文字符转化为大写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">( ‘b’ &amp; ’ _ <span class="string">&#x27;) = ‘B’</span></span><br><span class="line"><span class="string">( ‘B’ &amp; ’ _ &#x27;</span>) = ‘B’</span><br></pre></td></tr></table></figure>
+
+<p>利用异或操作 ^ 和空格进行英文字符大小写互换</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(‘d’ ^ ’ <span class="string">&#x27;) = ‘D’</span></span><br><span class="line"><span class="string">(‘D’ ^ ’ &#x27;</span>) = ‘d’</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">http://example.com/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%8D%E8%BF%90%E7%AE%97/" title="基础知识"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">基础知识</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/07/re/%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="动态调试"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">动态调试</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7"><span class="toc-number">1.</span> <span class="toc-text">位运算的一些奇技淫巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">位运算简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.</span> <span class="toc-text">技巧介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.位操作实现加减乘除运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">加法运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%8F%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">减法运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">乘法运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">除法运算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0%E5%80%BC"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.交换两个整数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%A4%E6%96%AD%E5%A5%87%E5%81%B6%E6%95%B0"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.判断奇偶数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%AB%98%E4%BD%8E%E4%BD%8D%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.高低位交换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BB%9F%E8%AE%A1%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.统计二进制中1的个数</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/tets/test/" title="tets">tets</a><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

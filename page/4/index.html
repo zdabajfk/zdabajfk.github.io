@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-06-08 20:34:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E6%8A%80%E5%B7%A7/%E7%88%86%E7%A0%B4/%E7%88%86%E7%A0%B4%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/" title="爆破">爆破</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.100Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">爆破基础（一）一.爆破的概念什么是爆破？
+我的理解就暴力破解，将flag一个一个试出来
+二.爆破小例1.只涉及一位 并且 只涉及数字 的加密加密算法：
+1234567891011121314151617#include &lt;stdio.h&gt;int main()&#123;	char str1[] = &#123; 1,2,3,4,5,6,7,8 &#125;;	char str2[8] = &#123; 0 &#125;;	int i;	for (i = 0; i &lt; 8; i++)	&#123;		str2[i] = str1[i] + 2;	&#125;	for (i = 0; i &lt; 8; i++)	&#123;		printf(&quot;%d&quot;,str2[i]);	&#125;	return 0;&#125;
+
+跟狗屎一样的代码…
+很简单，都不能算加密，就是把每个数加上2…
+爆破：
+12345678910111213141516171819202122232425262728293031323334#include &lt;stdio.h&gt ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E5%B7%A5%E5%85%B7/pythonz3/Z3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%20%E4%BB%8E%E4%BE%8B%E5%AD%90%E5%85%A5%E9%97%A8/" title="pythonz3">pythonz3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.095Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">Z3基础学习（一） 从例子入门一.解不等式例1.
+输入：
+1234from z3 import *x = Int(&#x27;x&#x27;)y = Int(&#x27;y&#x27;)solve(x &gt; 2, y &lt; 10, x + 2*y == 7)
+
+输出：
+1[y = 0, x = 7]
+
+函数Int(‘x’)创建了一个名为x的变量。函数solve解决了一个约束系统。上面的例子用到了两个变量x和y，以及三个约束条件（x&gt;2）、(y&lt;10)、(x+2y&#x3D;&#x3D;7)。Z3向python使用&#x3D;进行赋值。运算符&lt;,&lt;&#x3D;,&gt;,&gt;&#x3D;,&#x3D;&#x3D;和！&#x3D;用于比较。上面的例子中，表达式x+2y&#x3D;&#x3D;7是一个Z3约束。Z3可以解决和紧缩公式。
+二.简化器使用simplify将表达式进行化简
+例1.
+输入：
+123456from z3 import *x=Int(&#x27;x&#x27;)y=Int(&#x27;y&#x27;)print (simplify(x  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E5%B7%A5%E5%85%B7/pythonz3/Z3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%20(%E4%BA%8C)%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="pythonz3">pythonz3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.091Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">Z3基础学习 (二) 基础语法一.设置变量Int - 整数型
+1234# 声明单个变量x = Int(&#x27;x&#x27;)# 声明多个变量y,z = Ints(&#x27;y z&#x27;)
+
+
+| 运算需要初始化为Int变量
+
+Real - 实数型
+1234# 声明单个变量x = Real(&#x27;x&#x27;)# 声明多个变量y,z = Reals(&#x27;y z&#x27;)
+
+BitVec - 向量（位运算）
+1234# 声明单个 16 位的变量x = BitVec(&#x27;x&#x27;,16)# 声明多个 16 位的变量y,z = BitVecs(&#x27;y z&#x27;,16)
+
+
+只有 BitVec 变量可以进行异或
+
+1python solver.add(BitVec(&#x27;x&#x27;,8)^BitVec(&#x27;y&#x27;,8)==5)
+
+
+BitVec 变量值之间可进行&gt;或&lt;或&#x3D;或&gt;&#x3D;或&lt;&#x3D;的比较
+
+123BitVec(&#x27;a&#x27;,8)&gt;=B ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/Python/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88%E5%BA%9F%E6%A1%88%EF%BC%89/" title="Python">Python</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.084Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">一.数据类型
+字面量：在代码中被写下来的固定的值，称之为字面量1.注释（1）.注释的分类&lt;1&gt;.单行注释：以#开头，#右边的所以文字当作说明，而不是真正要执行的程序，起辅助说明作用
+
+&lt;2&gt;.多行注释：以一对三个引号引起来（”‘“注释内容”””)来解释说明一段代码的作用
+
+2.数据类型如何验证数据类型?使用type()语句语法：type(被查看类型的数据)（1）.使用方式1
+单引号中即为数据类型(2).使用方式2
+使用type可以查看变量中存储数据的类型3.标识符同C语言不可使用关键字
+4.运算符和 C语言差不多
+
+4.字符串的拓展内容（1）.字符串的三种定义方式&lt;1&gt;.单引号定义法 name &#x3D; ‘D0g3’
+&lt;2&gt;.双引号定义法 name &#x3D; “D0g3”
+&lt;3&gt;.三引号定义法 name &#x3D; “””D0g3””‘
+三引号定义法和多行注释写法一样，同样支持换行操作
+使用变量去接收它，它就是字符串
+不使用变量接收它，就可以作为多行注释使用
+(2).字符串的引号嵌套如果我想要定义的字符串本身，是包含 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/Python/%E5%BE%AA%E7%8E%AF/" title="Python">Python</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.081Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">二.Python中的循环1.两种基础循环while循环
+for循环
+2.while循环(1).while循环的基础语法12345while （条件）：	条件满足时 ， 做的事情1    条件满足时 ， 做的事情2    条件满足时 ， 做的事情3    ...（省略）...
+
+注意
+空格缩进，确定层次关系
+条件必须是布尔类型，True继续，False停止
+注意结束条件，不能死循环
+(2).whil循环的嵌套1234567891011while(条件1)：	条件1满足时 ， 做的事情1    条件1满足时 ， 做的事情2    条件1满足时 ， 做的事情3    ...（省略）...        while(条件2):        	条件2满足时 ， 做的事情1            条件2满足时 ， 做的事情2            条件2满足时 ， 做的事情3            ...（省略）...
+
+
+
+(3).while循环练习
+12345678910111213141516import randomnum = random.randint(1,100)flag = Tr ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/Python/Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Python">Python</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.075Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">一.Python中的数据类型
+1.数据类型的举例(1).数字Python 中的数字类型包括 整型、浮点型和复数类型。
+例子：
+整 型： 83  -239  299384938832
+浮点型：3.1415  4.2e-10  -2.34e-19
+复数类型：3.12+1.23j  -1.23-98j
+上述代码 浮点型中 4.2E-10 表示e记法可理解为科学计数法。
+(2).字符串&lt;1&gt;.字符串的三种定义方式[1].单引号定义法 name &#x3D; ‘D0g3’[2].双引号定义法 name &#x3D; “D0g3”[3].三引号定义法 name &#x3D; “””D0g3””‘三引号定义法和多行注释写法一样，同样支持换行操作
+使用变量去接收它，它就是字符串
+不使用变量接收它，就可以作为多行注释使用
+&lt;2&gt;.字符串的引号嵌套如果我想要定义的字符串本身，是包含：单引号，双引号，双引号自身呢？
+[1].单引号定义法，可以内涵双引号[2].双引号定义法，可以内涵单引号[3].可以使用转义字符（\）来将引号解除效用，变成普通的字符串&lt;3&gt;.字符串的拼接如 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/pe/PE%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%86%99%E5%85%A5/" title="pe">pe</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.070Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211311411511611711811912012112212312412512612712812913013113213313413513613713813914014114214314414514614714814915015115215315415515615715815916016116216316416516616716816917017117217317417517617717817918018118218318418518618718818919019119219319419519619719819920020120220 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/pe/PE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" title="pe">pe</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.060Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">PE文件结构一、PE文件特征识别一个文件是不是PE文件不应该只看文件后缀名，还应该通过PE指纹
+使用UE打开一个exe文件，发现文件的头两个字节都是MZ，0x3C位置保存着一个地址，查该地址处发现保存着“PE”，这样基本可以认定改文件是一个PE文件
+
+二、DOS MZ头IMAGE_DOS_HEADERIMGAE_DOS_HEADER的具体定义如下：
+123456789101112131415161718192021IMAGE_DOS_HEADER STRUCT +00h WORD e_magic  // Magic DOS signature MZ(4Dh 5Ah)   DOS可执行文件标记 +02h  WORD e_cblp   // Bytes on last page of file  +04h WORD e_cp   // Pages in file+06h WORD e_crlc   // Relocations+08h WORD e_cparhdr   // Size of header in paragraphs+0ah WORD e_minalloc   // Mini ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/pe/PE%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5/" title="pe">pe</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.055Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">PE文件写入1234567891011121314#include&lt;stdio.h&gt;#include&lt;windows.h&gt;int function(int a,int b)&#123;	int c = a + b;	return c;&#125;;int main()&#123;	int a = 1, b = 1;	//printf(&quot;bye&quot;);	function(a,b);	return 0;&#125;
+
+1234007F1E3B E8 CA F1 FF FF       call        _function (07F100Ah)  007F1E40 83 C4 08             add         esp,8  	return 0;007F1E43 33 C0                xor         eax,eax  
+
+07F100A为实际call的地址
+07F100A - FFFFF1CA &#x3D; 7F 1E40
+12007F100A E9 41 07 00 00       jmp    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/blog%20test/" title="_posts">_posts</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.047Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">blog testblog test、、、
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/tets/test/" title="tets">tets</a><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">40</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-08T12:34:40.781Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

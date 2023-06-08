@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-06-08 20:34:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/BIOS%E4%B8%AD%E6%96%AD/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.145Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">BIOS中断一.BIOS中断大全1、显示服务(Video Service——INT 10H)00H —设置显示器模式0CH —写图形象素01H —设置光标形状0DH —读图形象素02H —设置光标位置0EH —在Teletype模式下显示字符03H —读取光标信息0FH —读取显示器模式04H —读取光笔位置10H —颜色05H —设置显示页11H —字体06H、07H —初始化或滚屏12H —显示器的配置08H —读光标处的字符及其属性13H —在Teletype模式下显示字符串09H —在光标处按指定属性显示字符1AH —读取&#x2F;设置显示组合编码0AH —在当前光标处显示字符1BH —读取功能&#x2F;状态信息0BH —设置调色板、背景色或边框1CH —保存&#x2F;恢复显示器状态
+(1)、功能00H功能描述：设置显示器模式入口参数：AH＝00HAL＝显示器模式，见下表所示出口参数：无可用的显示模式如下所列：显示模式显示模式属性显示模式显示模式属性00H40×2516色 文本01H40×2516色 文本02H80×2516色 文本03H80×2516色 文本04H320 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/80x86%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.142Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">80x86处理器的工作模式一、三种工作模式80386以后的处理器有3种工作模式
+实模式
+保护模式
+虚拟8086模式
+实模式和虚拟8086模式，是为了向下兼容而设置的。而保护模式是我们的主角，（Windows也是在保护模式下），是我们现代系统实际上的工作模式。
+只有在保护模式下，32位CPU的寻址才能达到4GB的地址空间（地址空间就是CPU的视野，为什么是4GB捏，2^32正好是4GB，也就是说CPU单靠偏离1ip就可以寻址到4GB的内存空间，可以看到4GB的内容），同时，也能实现多任务、内存分页管理和优先级保护等先进的机制。
+二、Windows7的启动过程1.开启电源计算机系统将进行加电自检（POST）。如果通过，之后BIOS会读取主引导记录（MBR）——被标记为启动设备的硬盘的首扇区，并传送被Windows7建立的控制编码给MBR。
+这里插一句，有一种病毒叫做引导型病毒，就是利用MBR，修改MBR记录使病毒在系统之前加载
+（1）.MBR什么是MBR，MBR是一个存储区，它位于硬盘0磁道的第一个扇区，就是说硬盘读取的第一个位置，它的大小为512字节，里面存放有系统的加载信息、各个分区的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%8D%E8%BF%90%E7%AE%97/" title="基础知识">基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.139Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">基础知识（一）位运算一.位运算概述从现代计算机中所有的数据二进制的形式存储在设备中。即 0、1 两种状态，计算机对二进制数据进行的运算(+、-、*、&#x2F;)都是叫位运算，即将符号位共同参与运算的运算。
+口说无凭，举一个简单的例子来看下 CPU 是如何进行计算的，比如这行代码：
+123int a = 35;int b = 47;int c = a + b;
+
+计算两个数的和，因为在计算机中都是以二进制来进行运算，所以上面我们所给的 int 变量会在机器内部先转换为二进制在进行相加：
+123435:  0 0 1 0 0 0 1 147:  0 0 1 0 1 1 1 1————————————————————82:  0 1 0 1 0 0 1 0
+
+所以，相比在代码中直接使用(+、-、*、&#x2F;)运算符，合理的运用位运算更能显著提高代码在机器上的执行效率。
+二.位运算概览
+
+
+符号
+描述
+运算规则
+
+
+
+&amp;
+与
+两个位都为1时，结果才为1
+
+
+|
+或
+两个位都为0时，结果才为0
+
+
+^
+异或
+两个位相同为0，相异为1
+
+
+~
+取反
+0变1，1变0
+
+
+&lt;&lt ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" title="基础知识">基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.135Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">位运算的一些奇技淫巧位运算简介常见的位运算也就是以下6种：
+1234567891011| 运算：即或运算，全0则0&amp; 运算：即与运算，全1则1^ 运算：即异或运算，相同为0，不同为1~ 运算：即非运算，0为1,1为0(&lt;&lt;) 运算：左移运算，高位丢弃，低位补0(&gt;&gt;) 运算：右移运算。（无符号）低位丢弃，高位补0；（有符号）低位丢弃，高位补符号
+
+常用的就是这6种，一般解题中也完全够用了！
+技巧介绍1.位操作实现加减乘除运算加法运算这里先从加法运算说起：
+我们假设
+12a: 001010101b: 000101111
+
+在无进位相加下，a^b 就可以达到相加的目的；而在只考虑进位的位的情况下，就是只考虑进位产生的值的时候，我们可以用（a&amp;b）&lt;&lt; 1,那么我们结合上面两种情况是不是可以这么想：我们将a^b的值和(a&amp;b)&lt;&lt;1的值轮番进行求 ^ 和 &amp;&lt;&lt;1 运算，直到最后&amp;&lt;&lt;1的值算为全0，这就意味着所有的进位都已经被 ^ 进结果了，那么最终的结果就是求和的值了
+我们可以 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="动态调试">动态调试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.131Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">动态调试</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E7%BB%83%E4%B9%A0/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BB%BB%E5%8A%A1/1.elf%E7%BB%83%E4%B9%A0/" title="第一次任务">第一次任务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.127Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">这个真的是一波三折…
+第一次windows更新把我写的搞没了…
+第二次我做3.elf的时候用vs2022写东西，写完运行不起来，我改了一下，结果弹出来一个找不到什么东西的弹窗，我点确定，捏妈妈的电脑黑屏，然后所有东西都错位了…typora打开也是空白，重启之后新写的没了…服了
+开的东西太多电脑爆内存了？不知道，当时把ida、虚拟机、vs2022、typora、chrome都开着的…
+现在每写一点就ctrl + s保命
+1.elf练习一.把文件拖进IDA这个没什么好说的，有手就行
+二.进入start函数直接ctrl + f 查找函数
+可以看到，lea指令将main函数的地址送到rdi寄存器里面（目的变址寄存器）
+ps：我不知道目的变址寄存器是个什么东西…
+
+但应该是，就进入了main函数
+三.进入main函数进入main函数后，发现
+
+
+call调用了一个叫_Z6leve11v的函数
+那我们就进去看一看
+四.加密进去之后，可以看到，这就是题目本身了
+
+先看一下加密的过程吧
+先对v1进行按位异或
+再将输入的字符串的每一位，按位异或上下一位（除最后一位）
+最后一位按位异或上s[0],接着再将 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E7%BB%83%E4%B9%A0/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/Reversing-x64Elf-100/" title="攻防世界">攻防世界</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.126Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">题目：Reversing-x64Elf-10012char v3[3][8] = &#123;&#123;&quot;Dufhbmf&quot;&#125;,&#123;&quot;pG`imos&quot;&#125;,&#123;&quot;ewUglpt&quot;&#125;&#125;;char flag[11];
+
+1234for(int i = 0;i&lt;=11;++i)&#123;	flag[i] = v3[i%3][2*(i/3)] - 1;&#125;
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E7%BB%83%E4%B9%A0/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/666/" title="攻防世界">攻防世界</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.123Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">题目：666一.进入start函数
+看了下汇编，main那里
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E7%BB%83%E4%B9%A0/%E6%8B%9B%E6%96%B0%E8%B5%9B/%E6%8B%9B%E6%96%B0%E8%B5%9Bwp/" title="招新赛">招新赛</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.117Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">招新赛wp一.Base8类似Base64的思路
+
+
+
+文本
+Z
+
+S
+
+
+Z
+
+
+
+
+
+ASCII码
+90
+
+83
+
+
+90
+
+
+
+
+ASCII码
+0b01011010
+
+0b01010011
+
+
+0b01011010
+
+
+
+
+二进制位
+0b010
+0b110
+0b100
+0b101
+0b001
+0b101
+0b011
+0b010
+
+
+索引
+2
+6
+4
+5
+1
+5
+3
+2
+
+
+Base8编码
+2
+6
+4
+5
+1
+5
+3
+2
+
+
+用下面的代码可以算出ASCII码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;char transfer(int x)&#123;	char buf[3] = &#123; 0,0,0 &#125;;	int count = 0;	while ((x / ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/re%E7%BB%83%E4%B9%A0/%E6%8B%9B%E6%96%B0%E8%B5%9B/maze/" title="招新赛">招新赛</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.112Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">maze第一个迷宫1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 3, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/tets/test/" title="tets">tets</a><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">40</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-08T12:34:40.781Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

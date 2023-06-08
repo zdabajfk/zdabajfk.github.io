@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-06-08 20:34:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">hint1：找路得有地图捏
+hint2：你指尖跃动的电光,是我此生不灭的信仰
+hint3: 我是谁，我在哪儿
+hint4：welcome to ChengDu，这里只有0和1
+hint5：
+hint6：虽然是正整数，但是小小的也很可爱呢
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">Gray一.加密方式未加密二进制:11011
+1.加密过程先0 ^ 第一个数即：0 ^ 1 &#x3D; 1再用第二个数，异或上未被加密时的第一个数，即11011中的第一个1即：1 ^ 1 &#x3D; 0再用第三个数，异或上未被加密时的第二个数，即11011中的第二个1即：0 ^ 1 &#x3D; 1再用第四个数，异或上未被加密时的第三个数，即11011中的0即：1 ^ 0 &#x3D; 1再用第五个数，异或上未被加密时的第四个数，即11011中的第三个1
+1 ^ 1 &#x3D; 0
+加密后得到的格雷码：10110
+2.解密过程先用格雷码的第一位（10110）  ^ 0
+即：
+1 ^ 0 &#x3D; 1
+再将格雷码的第二位（10110） ^ 上一步得到的、解码出的数
+即：
+0 ^ 1 &#x3D; 1
+再将格雷码的第三位（10110） ^ 上一步得到的、解码出的数
+即：
+1 ^ 1 &#x3D; 0
+再将格雷码的第四位（10110） ^ 上一步得到的、解码出的数
+即：
+1 ^ 0 &#x3D; 1
+再将格雷码的第五位（10110） ^ 上一步得到的、解码出的数
+即：
+0 ^ 1  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">test4
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/tets/test/" title="tets">tets</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">1）不先把图片放到typora，我们先把图片放到cnblog为什么？就是为了让cnblog给我上传以下图片到图床下面就是我要演示的图片
+可以看见下面的图片已经是网络图片了，不再是本地图片
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">只狼解包action（用不上）
+script（用不上）
+chr角色模型、动画，玩家（C0000）、敌人、Boos、NPC
+cutscene过场动画、都是hkx动作文件，加上名字就是过场，盲猜动画
+event用不上
+facegen脸部模型，慎拆
+font游戏内字体
+zhocn_map​	地图字体（换字体也要改这个，不然乱码）
+zhocn_std​	其他字体（换字体改这个）
+zhocn_texteffect​	不知道干吗用的字体（应该？吧？）
+map地图模型布局等，应该用不到
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC/" title="游戏逆向">游戏逆向</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.166Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">只狼游戏逆向癸卯年乙卯月，余玩《只狼》，被虐良久，战于赤鬼二时余，延未能决胜，耻怒交加，撼胸顿足，于是志学游戏逆向，欲行非法而通关。
+一.工具目前只用到了cheat engine 直接官网搜索下载
+官网连接（7.2）：https://www.cheatengine.org/
+二.过程目的：修改血量、架势条、物品数值
+1.寻找血量代码通过扫描：减少的数值、增加的数值、未改变的数值判断血量代码
+只狼中，血量以4字节存储
+并且有：UI界面显示，与实际血量 两个
+
+但这个并不是基址，这个是动态地址，我们需要找到基址
+UI界面血量 显示过程因该是：读取实际血量地址中的数据 ——&gt; 改变UI界面
+我觉得以上步骤进行结束后，会将储存UI界面血量的地址内的数据与实际血量地址中的数据进行比较，虽然我还没找到在哪儿比较的……
+因为在修改数值时，如果只修改UI界面的血量，UI的显示会先增加再变回修改前的数值，但只修改实际血量的数值，UI界面显示也会随之变化
+人物体积
+sekiro.exe+B6A155: E8 96 EE FF FF        - call sekiro.exe+B68FF0
+游戏 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.163Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">汇编学习（一）一、必须了解的基础知识1.80x86处理器的工作模式（1）.实模式
+（2）.保护模式
+（3）.虚拟8086模式
+2.Windows的内存管理机制（1）.Dos操作系统的内存安排情况
+（2）.80386的内存寻址机制
+（3）.80386的内存分页机制
+（4）.Windows的内存安排
+（5）.从Win32汇编的角度看内存寻址
+3.Windows的特权保护机制（1）.80386的中断和异常
+（2）.80386的保护机制
+（3）.Windows的保护机制
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.158Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">汇编基础知识一.偏移基址二.地址总线CPU主要用于处理数据，其内容的储存空间非常有限，因此需要将数据存储到专门储存功能的内存中
+地址总线的作用是：CPU 通过地址找到对应的内存的物理数据的传递工具
+由于计算机只能处理 0、1 二进制数据，每一条线可以处理 0、1 两种类型数据，所以若只有一根地址总线，那么可以索引地址0、地址1的两个内存地址。若有两根地址总线，那么可以索引2 ^ 2 &#x3D; 4个内存地址：00、01、10、11
+一个 16位宽度的位址总线 到达 2 的 16 次方 &#x3D; 65536 &#x3D; 64 KB 的内存位址
+一个 32位单元位址总线 可以寻址到 4,294,967,296 &#x3D; 4 GB 的位址。但现在很多计算机内存已经大于4GB
+64位的处理器也就是说可以寻址到2^64&#x3D;16EB的位址
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/%E5%AF%84%E5%AD%98%E5%99%A8/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.154Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">寄存器一.CPU概述一个典型的CPU由运算器、控制器、寄存器等器件组成，这些器件靠内部总线相连
+内部总线和外部总线的区别：
+内部总线实现CPU内部各个器件之间的联系，外部总线实现CPU和主板上其他器件的联系
+二.寄存器概述8086CPU有14个寄存器，它们的名称为：AX、BX、CX、DX、SI、DI、SP、BP、IP、CS、SS、DS、ES、PSW
+1.通用寄存器8086CPU所有的寄存器都是16位的，可以存放2个字节
+AX、BX、CX、DX通常用来存放一般性数据，称为通用寄存器
+下面以AX为例，看一下通用寄存器的逻辑结构
+
+一个16位寄存器可以存储一个16位的数据（数据的有效存放情况）
+例如：
+数据：18
+二进制表示：10010
+在寄存器AX中的储存：
+
+8086上一代CPU中的寄存器都是8位的
+为了保证兼容性，这四个寄存器都可以分为两个独立的8位寄存器使用
+即AX可以分为AH和AL，AH中的H是high的意思，即存储高8位，AL中的L是low的意思，即存储低8位
+BX分为BH和BL
+CX分为CH和CL
+DX分为DH和DL
+8086CPU的8位寄存器存储逻辑
+以AX为例，8086CP ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/07/re/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E5%8F%8A%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习">汇编学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-07T05:46:58.148Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></span></div><div class="content">各类存储器芯片及内存地址空间从读写属性上来看分为两类：随机存储器（RAM）和只读存储器（ROM）
+从功能和连接上分类：随机存储器RAM、装有BIOS的ROM、接口卡上的RAM
+一.随机存储器：断电后数据会遗失
+如内存
+二.只读存储器永远只能读取，但是里面的数据永远都保存在那里，除非你把它刷掉了
+PC机中各类存储器的逻辑连接情况
+
+三.内存地址空间上述的那些存储器在物理上是独立的器件，但是他们在以下两点上相同
+1.都和CPU的总线相连
+2.CPU对他们进行读或写的时候都通过控制线发出内存读写命令
+从CPU来看，将各类存储器看作一个逻辑存储器：
+1.所有的物理存储器被看作一个由若干个存储单元组成的逻辑存储器
+2.每个物理存储器在这个逻辑存储器中占有一个地址段，及一段地址空间
+3.CPU在这段地址空间中读写数据，实际上就是在相应的物理存储器中读写数据
+CPU的视角
+
+8086PC机的内存地址空间分配
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/tets/test/" title="tets">tets</a><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">40</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-08T12:34:40.781Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

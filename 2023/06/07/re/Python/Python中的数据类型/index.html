@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一.Python中的数据类型 1.数据类型的举例(1).数字Python 中的数字类型包括 整型、浮点型和复数类型。 例子： 整 型： 83  -239  299384938832 浮点型：3.1415  4.2e-10  -2.34e-19 复数类型：3.12+1.23j  -1.23-98j 上述代码 浮点型中 4.2E-10 表示e记法可理解为科学计数法。 (2).字符串&lt;1&gt;.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="http://example.com/2023/06/07/re/Python/Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.Python中的数据类型 1.数据类型的举例(1).数字Python 中的数字类型包括 整型、浮点型和复数类型。 例子： 整 型： 83  -239  299384938832 浮点型：3.1415  4.2e-10  -2.34e-19 复数类型：3.12+1.23j  -1.23-98j 上述代码 浮点型中 4.2E-10 表示e记法可理解为科学计数法。 (2).字符串&lt;1&gt;.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-06-07T05:46:58.075Z">
+<meta property="article:modified_time" content="2023-06-07T05:47:24.423Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/06/07/re/Python/Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-07 13:47:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-06-07T05:46:58.075Z" title="Created 2023-06-07 13:46:58">2023-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-06-07T05:47:24.423Z" title="Updated 2023-06-07 13:47:24">2023-06-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一-Python中的数据类型"><a href="#一-Python中的数据类型" class="headerlink" title="一.Python中的数据类型"></a>一.Python中的数据类型</h1><p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226224335612-1811400238.png"></p>
+<h2 id="1-数据类型的举例"><a href="#1-数据类型的举例" class="headerlink" title="1.数据类型的举例"></a>1.数据类型的举例</h2><h3 id="1-数字"><a href="#1-数字" class="headerlink" title="(1).数字"></a>(1).数字</h3><p>Python 中的数字类型包括 整型、浮点型和复数类型。</p>
+<p>例子：</p>
+<p>整 型： 83  -239  299384938832</p>
+<p>浮点型：3.1415  4.2e-10  -2.34e-19</p>
+<p>复数类型：3.12+1.23j  -1.23-98j</p>
+<p>上述代码 浮点型中 4.2E-10 表示e记法可理解为科学计数法。</p>
+<h3 id="2-字符串"><a href="#2-字符串" class="headerlink" title="(2).字符串"></a>(2).字符串</h3><h4 id="lt-1-gt-字符串的三种定义方式"><a href="#lt-1-gt-字符串的三种定义方式" class="headerlink" title="&lt;1&gt;.字符串的三种定义方式"></a>&lt;1&gt;.字符串的三种定义方式</h4><h5 id="1-单引号定义法-name-x3D-‘D0g3’"><a href="#1-单引号定义法-name-x3D-‘D0g3’" class="headerlink" title="[1].单引号定义法 name &#x3D; ‘D0g3’"></a>[1].单引号定义法 name &#x3D; ‘D0g3’</h5><h5 id="2-双引号定义法-name-x3D-“D0g3”"><a href="#2-双引号定义法-name-x3D-“D0g3”" class="headerlink" title="[2].双引号定义法 name &#x3D; “D0g3”"></a>[2].双引号定义法 name &#x3D; “D0g3”</h5><h5 id="3-三引号定义法-name-x3D-“””D0g3””‘"><a href="#3-三引号定义法-name-x3D-“””D0g3””‘" class="headerlink" title="[3].三引号定义法 name &#x3D; “””D0g3””‘"></a>[3].三引号定义法 name &#x3D; “””D0g3””‘</h5><p>三引号定义法和多行注释写法一样，同样支持换行操作</p>
+<p>使用变量去接收它，它就是字符串</p>
+<p>不使用变量接收它，就可以作为多行注释使用</p>
+<h4 id="lt-2-gt-字符串的引号嵌套"><a href="#lt-2-gt-字符串的引号嵌套" class="headerlink" title="&lt;2&gt;.字符串的引号嵌套"></a>&lt;2&gt;.字符串的引号嵌套</h4><p>如果我想要定义的字符串本身，是包含：单引号，双引号，双引号自身呢？</p>
+<h5 id="1-单引号定义法，可以内涵双引号"><a href="#1-单引号定义法，可以内涵双引号" class="headerlink" title="[1].单引号定义法，可以内涵双引号"></a>[1].单引号定义法，可以内涵双引号</h5><h5 id="2-双引号定义法，可以内涵单引号"><a href="#2-双引号定义法，可以内涵单引号" class="headerlink" title="[2].双引号定义法，可以内涵单引号"></a>[2].双引号定义法，可以内涵单引号</h5><h5 id="3-可以使用转义字符（-）来将引号解除效用，变成普通的字符串"><a href="#3-可以使用转义字符（-）来将引号解除效用，变成普通的字符串" class="headerlink" title="[3].可以使用转义字符（\）来将引号解除效用，变成普通的字符串"></a>[3].可以使用转义字符（\）来将引号解除效用，变成普通的字符串</h5><h4 id="lt-3-gt-字符串的拼接"><a href="#lt-3-gt-字符串的拼接" class="headerlink" title="&lt;3&gt;.字符串的拼接"></a>&lt;3&gt;.字符串的拼接</h4><p>如果我们有两个字符串（文本）字面量，可以将其拼接成一个字符串，通过+号即可完成</p>
+<p>Print(“D0” +”g3”)</p>
+<p>输出结果：D0g3</p>
+<p>不过一般情况下，单纯的两个字符串字面量进行拼接显的得很傻逼，一般字面量和变量或变量和变量之间会使用拼接</p>
+<p>如：</p>
+<p>Name &#x3D; “D0”</p>
+<p>Print &#x3D; (“我想加入” + Name + “g3”)</p>
+<p>输出结果 ：我想加入D0g3</p>
+<p>注：字符串不能和其他类型进行拼接，只能和字符串本身拼接</p>
+<h4 id="lt-4-gt-字符串格式化"><a href="#lt-4-gt-字符串格式化" class="headerlink" title="&lt;4&gt;.字符串格式化"></a>&lt;4&gt;.字符串格式化</h4><p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226231412477-296915298.png"></p>
+<p>数字类型与字符串类型的拼接同样可以通过字符串格式化完成</p>
+<p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226231540104-207720706.png"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226231548703-1730588474.png"></p>
+<p>注意</p>
+<p>对于<em>输出</em>，<code>%i</code>和<code>%d</code>在Python和C中是完全相同的</p>
+<p>不同之处在于，当您使用它们解析C中的输入时，使用<code>scanf()</code>函数，它们的作用是什么。</p>
+<p>Python没有<code>scanf</code>等价物，但是Python字符串格式化操作保留了这两个选项，以保持与C兼容</p>
+<p>新的<code>str.format()</code>和<code>format()</code>放弃了对<code>i</code>的支持，只使用了<code>d</code>。</p>
+<h5 id="1-字符串格式化——数字的精度控制"><a href="#1-字符串格式化——数字的精度控制" class="headerlink" title="[1].字符串格式化——数字的精度控制"></a>[1].字符串格式化——数字的精度控制</h5><p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226232202034-498062455.png"><br><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226232211229-696656523.png"><br><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226232217827-992105252.png"></p>
+<h5 id="2-快速格式化字符串的方式——优雅永不过时"><a href="#2-快速格式化字符串的方式——优雅永不过时" class="headerlink" title="[2].快速格式化字符串的方式——优雅永不过时"></a>[2].快速格式化字符串的方式——优雅永不过时</h5><p><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226232415224-492879812.png"><br><img src="https://img2023.cnblogs.com/blog/3069851/202212/3069851-20221226232424110-523417159.png"></p>
+<h5 id="这种方法，不控制数据类型，不做精度控制"><a href="#这种方法，不控制数据类型，不做精度控制" class="headerlink" title="这种方法，不控制数据类型，不做精度控制"></a>这种方法，不控制数据类型，不做精度控制</h5><h5 id="对表达式进行字符格式化"><a href="#对表达式进行字符格式化" class="headerlink" title="对表达式进行字符格式化"></a>对表达式进行字符格式化</h5><h5 id="以上演示，都是基于变量。"><a href="#以上演示，都是基于变量。" class="headerlink" title="以上演示，都是基于变量。"></a>以上演示，都是基于变量。</h5><h5 id="如果要更优雅一些（优雅永不过时），更精简，需要对表达式进行格式化"><a href="#如果要更优雅一些（优雅永不过时），更精简，需要对表达式进行格式化" class="headerlink" title="如果要更优雅一些（优雅永不过时），更精简，需要对表达式进行格式化"></a>如果要更优雅一些（优雅永不过时），更精简，需要对表达式进行格式化</h5><h3 id="3-列表"><a href="#3-列表" class="headerlink" title="(3).列表"></a>(3).列表</h3><p>列表中可以保存任意数量任意类型的 值，这些值称作元素，元素之间用逗号 “ , ” 分隔 。列表中元素的个数和值是可以随意更改的，在使用时用  []  包含。列表可进行创建、查找、切片、增加、修改、删除、循环和排序操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建一个列表</span></span><br><span class="line">list_1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="string">&#x27;xiangming&#x27;</span>]   </span><br></pre></td></tr></table></figure>
+
+<h3 id="4-元组"><a href="#4-元组" class="headerlink" title="(4).元组"></a>(4).元组</h3><p>元组类型与列表类型基本相似，最大的区别在于元组中的元素使用小括号 ()  包含，元素不可以被修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#元组的创建</span></span><br><span class="line">tuple_1 = (<span class="number">1</span>,<span class="number">2</span>,<span class="string">&quot;xiangming&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-集合"><a href="#5-集合" class="headerlink" title="(5).集合"></a>(5).集合</h3><p>集合是一个无序的、不重复的数据组合，它的主要作用有两个，分别是去重和关系测试。因为集合本身是无序的，不可以为集合创建索引或执行切片操作，也没有键可用来获取集合中元素的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建集合并赋值</span></span><br><span class="line">a_set = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125; </span><br></pre></td></tr></table></figure>
+
+<h3 id="6-字典"><a href="#6-字典" class="headerlink" title="(6).字典"></a>(6).字典</h3><p>字典是Python中表示映射的数据类型，由键-值对组成。字典可以存储不同类型的元素，元素使用大括号 {}  来包含。通常情况下，字典的键会以字符串或者数值的形式来表示，而值可以是任意类型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建一个字典</span></span><br><span class="line">dict_1 = &#123;<span class="string">&quot;long&quot;</span>:<span class="number">120</span>,<span class="string">&quot;tall&quot;</span>:<span class="number">180</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-布尔类型"><a href="#7-布尔类型" class="headerlink" title="(7).布尔类型"></a>(7).布尔类型</h3><p>布尔类型 是特殊的整型 值只有两个，分别是True和False。如果将布尔值进行数值运算，True会被当作整型1，False会被当作整型0。布尔类型常常被用来判断条件是否成立。</p>
+<p>以下值会被判断是True或False：</p>
+<p>　数字0  ———- False；</p>
+<p>​		None ———- False;  None是真空；</p>
+<p>​		null （包括空字符串、空列表、空元组….） ——— False；</p>
+<p>​		除了以上的，其他的表达式均会被判定为 True。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/06/07/re/Python/Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">http://example.com/2023/06/07/re/Python/Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/06/07/re/Python/%E5%BE%AA%E7%8E%AF/" title="Python"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Python</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/07/re/pe/PE%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%86%99%E5%85%A5/" title="pe"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">pe</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-Python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">一.Python中的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%BE%E4%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.数据类型的举例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E5%AD%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">(1).数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.1.2.</span> <span class="toc-text">(2).字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lt-1-gt-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">&lt;1&gt;.字符串的三种定义方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8D%95%E5%BC%95%E5%8F%B7%E5%AE%9A%E4%B9%89%E6%B3%95-name-x3D-%E2%80%98D0g3%E2%80%99"><span class="toc-number">1.1.2.1.1.</span> <span class="toc-text">[1].单引号定义法 name &#x3D; ‘D0g3’</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%AE%9A%E4%B9%89%E6%B3%95-name-x3D-%E2%80%9CD0g3%E2%80%9D"><span class="toc-number">1.1.2.1.2.</span> <span class="toc-text">[2].双引号定义法 name &#x3D; “D0g3”</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E4%B8%89%E5%BC%95%E5%8F%B7%E5%AE%9A%E4%B9%89%E6%B3%95-name-x3D-%E2%80%9C%E2%80%9D%E2%80%9DD0g3%E2%80%9D%E2%80%9D%E2%80%98"><span class="toc-number">1.1.2.1.3.</span> <span class="toc-text">[3].三引号定义法 name &#x3D; “””D0g3””‘</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lt-2-gt-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%BC%95%E5%8F%B7%E5%B5%8C%E5%A5%97"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">&lt;2&gt;.字符串的引号嵌套</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8D%95%E5%BC%95%E5%8F%B7%E5%AE%9A%E4%B9%89%E6%B3%95%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%86%85%E6%B6%B5%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">1.1.2.2.1.</span> <span class="toc-text">[1].单引号定义法，可以内涵双引号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%AE%9A%E4%B9%89%E6%B3%95%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%86%85%E6%B6%B5%E5%8D%95%E5%BC%95%E5%8F%B7"><span class="toc-number">1.1.2.2.2.</span> <span class="toc-text">[2].双引号定义法，可以内涵单引号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%EF%BC%88-%EF%BC%89%E6%9D%A5%E5%B0%86%E5%BC%95%E5%8F%B7%E8%A7%A3%E9%99%A4%E6%95%88%E7%94%A8%EF%BC%8C%E5%8F%98%E6%88%90%E6%99%AE%E9%80%9A%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.1.2.2.3.</span> <span class="toc-text">[3].可以使用转义字符（\）来将引号解除效用，变成普通的字符串</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lt-3-gt-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8B%BC%E6%8E%A5"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">&lt;3&gt;.字符串的拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lt-4-gt-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">&lt;4&gt;.字符串格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E2%80%94%E2%80%94%E6%95%B0%E5%AD%97%E7%9A%84%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="toc-number">1.1.2.4.1.</span> <span class="toc-text">[1].字符串格式化——数字的精度控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%BF%AB%E9%80%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%96%B9%E5%BC%8F%E2%80%94%E2%80%94%E4%BC%98%E9%9B%85%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%97%B6"><span class="toc-number">1.1.2.4.2.</span> <span class="toc-text">[2].快速格式化字符串的方式——优雅永不过时</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%99%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%8C%E4%B8%8D%E6%8E%A7%E5%88%B6%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E4%B8%8D%E5%81%9A%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="toc-number">1.1.2.4.3.</span> <span class="toc-text">这种方法，不控制数据类型，不做精度控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E5%AD%97%E7%AC%A6%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.1.2.4.4.</span> <span class="toc-text">对表达式进行字符格式化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8A%E6%BC%94%E7%A4%BA%EF%BC%8C%E9%83%BD%E6%98%AF%E5%9F%BA%E4%BA%8E%E5%8F%98%E9%87%8F%E3%80%82"><span class="toc-number">1.1.2.4.5.</span> <span class="toc-text">以上演示，都是基于变量。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E8%A6%81%E6%9B%B4%E4%BC%98%E9%9B%85%E4%B8%80%E4%BA%9B%EF%BC%88%E4%BC%98%E9%9B%85%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%97%B6%EF%BC%89%EF%BC%8C%E6%9B%B4%E7%B2%BE%E7%AE%80%EF%BC%8C%E9%9C%80%E8%A6%81%E5%AF%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.1.2.4.6.</span> <span class="toc-text">如果要更优雅一些（优雅永不过时），更精简，需要对表达式进行格式化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">(3).列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%83%E7%BB%84"><span class="toc-number">1.1.4.</span> <span class="toc-text">(4).元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%9B%86%E5%90%88"><span class="toc-number">1.1.5.</span> <span class="toc-text">(5).集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AD%97%E5%85%B8"><span class="toc-number">1.1.6.</span> <span class="toc-text">(6).字典</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.7.</span> <span class="toc-text">(7).布尔类型</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E6%B8%B8%E5%9B%AD%E4%BC%9Ahint/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.183Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/%E5%AF%86%E7%A0%81%E5%AD%A6/%E6%A0%BC%E9%9B%B7%E7%A0%81/" title="密码学">密码学</a><time datetime="2023-06-07T05:46:58.180Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/Untitled/" title="_posts">_posts</a><time datetime="2023-06-07T05:46:58.176Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/tets/test/" title="tets">tets</a><time datetime="2023-06-07T05:46:58.173Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/07/re/%E6%B8%B8%E6%88%8F%E9%80%86%E5%90%91/%E5%8F%AA%E7%8B%BC%E8%A7%A3%E5%8C%85/" title="游戏逆向">游戏逆向</a><time datetime="2023-06-07T05:46:58.170Z" title="Created 2023-06-07 13:46:58">2023-06-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
